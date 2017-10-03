@@ -64,25 +64,3 @@ spec:
   selector:
     app: nginx-app
   type: LoadBalancer
----
-apiVersion: v1
-data:
-  vhost.conf: |
-    # example PHP-FPM vhost
-    server {
-      listen 0.0.0.0:80;
-      root /app;
-      location / {
-        index index.html index.php;
-      }
-      location ~ \.php$ {
-        fastcgi_pass phpfpm-server:9000;
-        fastcgi_index index.php;
-        include fastcgi.conf;
-      }
-    }
-kind: ConfigMap
-metadata:
-  labels:
-    app: nginx-app
-  name: nginx-app
