@@ -1,14 +1,6 @@
 {
   fullname: "nginx-app",
-
-  ## Bitnami NGINX image version
-  ## ref: https://hub.docker.com/r/bitnami/nginx/tags/
-  ##
   imageTag: "1.10.2-r3",
-
-  ## Specify a imagePullPolicy
-  ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
-  ##
   imagePullPolicy: "IfNotPresent",
 
   vhost:
